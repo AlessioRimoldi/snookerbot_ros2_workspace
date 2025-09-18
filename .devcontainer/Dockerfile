@@ -40,4 +40,7 @@ ENV SHELL=/bin/bash
 USER $USERNAME
 WORKDIR /home/$USERNAME/snookerbot_ros2_workspace
 
+# 7) Add source setup.bash to .bashrc
+RUN echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
+
 CMD [ "bash" ]
